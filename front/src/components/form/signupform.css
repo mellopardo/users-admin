@@ -1,0 +1,20 @@
+.signup-form {
+    border: 1px solid rgb(114, 114, 116);
+    box-shadow: 2mm;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 26px 30px 26px 30px;
+}
+
+h1 {
+    text-align: center;
+    background: -webkit-linear-gradient(rgb(6, 86, 100), #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    height: 50px;
+}
+
+button {
+    min-width: 200px;
+}
