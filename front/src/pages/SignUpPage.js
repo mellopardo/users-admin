@@ -17,7 +17,7 @@ const SignUpPage = () => {
           lg={{ span: 4, offset: 4 }}
           xs={{ span: 10, offset: 1 }}
         >
-          <SignUpForm />
+          <SignUpForm onSubmit={() => {}} />
         </Col>
       </Row>
     </Container>
