@@ -3,7 +3,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import './signupform.css';
+import './form.css';
 
 const SignUpForm = (props) => {
   const [validated, setValidated] = useState(false);

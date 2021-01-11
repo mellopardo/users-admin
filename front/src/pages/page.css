@@ -1,3 +1,13 @@
 .container-fluid {
     background: linear-gradient(45deg, rgba(34, 114, 103, 0.8), rgba(33, 233, 150, 0.8)), url('../images/background-mt.jpg');
 }  
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    right: 2%;
+}
+
+.link{
+    color:#212529;
+}
