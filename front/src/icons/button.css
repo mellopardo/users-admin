@@ -1,0 +1,11 @@
+.icon-btn {
+    min-width: 5px;
+    background: transparent;
+    min-width: 5px;
+    padding: 0;
+    border: 0;
+}
+
+.icon-btn:focus {
+    outline: none;
+}

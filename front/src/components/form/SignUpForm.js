@@ -98,7 +98,11 @@ const SignUpForm = (props) => {
           Minimum 8 characters
         </Form.Control.Feedback>
       </Form.Group>
-      <Button variant="danger" type="submit" className="mx-auto d-block">
+      <Button
+        variant="danger"
+        type="submit"
+        className="mx-auto d-block button-signup"
+      >
         Submit
       </Button>
     </Form>

@@ -15,11 +15,12 @@ h1 {
     height: 50px;
 }
 
-button {
+.button-login{
     min-width: 200px;
+    margin-top: 33px;
 }
 
-.button-login{
+.button-signup{
     min-width: 200px;
     margin-top: 33px;
 }

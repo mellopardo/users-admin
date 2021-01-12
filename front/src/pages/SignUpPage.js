@@ -6,8 +6,8 @@ import Col from 'react-bootstrap/Col';
 import SignUpForm from '../components/form/SignUpForm';
 import './page.css';
 
-const SignUpPage = ({history}) => {
-  const onSubmit = () => history.push('/login');
+const SignUpPage = ({ history }) => {
+  const onSubmit = () => history.push('/');
   return (
     <Container
       fluid
@@ -19,7 +19,7 @@ const SignUpPage = ({history}) => {
           lg={{ span: 4, offset: 4 }}
           xs={{ span: 10, offset: 1 }}
         >
-        <SignUpForm onSubmit={onSubmit}  />
+          <SignUpForm onSubmit={onSubmit} />
         </Col>
       </Row>
     </Container>
