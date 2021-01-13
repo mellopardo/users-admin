@@ -6,3 +6,11 @@
     border-radius: 5px;
     overflow: hidden;
 }
+
+.header-table tr {
+   background: #31373d; 
+}
+
+.header-table tr th{
+    color: #fff;
+}

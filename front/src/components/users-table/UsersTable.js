@@ -7,8 +7,8 @@ import './userstable.css';
 
 const UsersTable = ({ users, onEdit, onDelete }) => {
   return (
-    <Table className="table table-striped table-container">
-      <thead>
+    <Table className="table table-striped table-container" responsive>
+      <thead className="header-table">
         <tr>
           <th scope="col">Name</th>
           <th scope="col">Last name</th>

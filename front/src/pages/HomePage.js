@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { withRouter } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -7,8 +8,10 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import EditUserForm from '../components/form/EditUserForm';
 import './homepage.css';
+import LineGraph from '../components/graph/LineGraph';
+import NavigationBar from '../components/nav-bar/NavigationBar';
 
-const HomePage = () => {
+const HomePage = ({ history }) => {
   const users = [
     {
       name: 'name1',
@@ -34,6 +37,75 @@ const HomePage = () => {
       username: 'username4',
       email: 'email4@gmail.com',
     },
+    {
+      name: 'name5',
+      last_name: 'last_name5',
+      username: 'username5',
+      email: 'email5@gmail.com',
+    },
+    {
+      name: 'name6',
+      last_name: 'last_name6',
+      username: 'username6',
+      email: 'email6@gmail.com',
+    },
+  ];
+
+  const data = [
+    {
+      id: 'japan',
+      color: 'hsl(245, 70%, 50%)',
+      data: [
+        {
+          x: 'plane',
+          y: 104,
+        },
+        {
+          x: 'helicopter',
+          y: 285,
+        },
+        {
+          x: 'boat',
+          y: 207,
+        },
+        {
+          x: 'train',
+          y: 186,
+        },
+        {
+          x: 'subway',
+          y: 92,
+        },
+        {
+          x: 'bus',
+          y: 294,
+        },
+        {
+          x: 'car',
+          y: 132,
+        },
+        {
+          x: 'moto',
+          y: 83,
+        },
+        {
+          x: 'bicycle',
+          y: 228,
+        },
+        {
+          x: 'horse',
+          y: 82,
+        },
+        {
+          x: 'skateboard',
+          y: 270,
+        },
+        {
+          x: 'others',
+          y: 119,
+        },
+      ],
+    },
   ];
 
   const [user, setUser] = useState(null);
@@ -52,13 +124,24 @@ const HomePage = () => {
     setShowDeleteModal(true);
   };
 
+  const onLogOut = () => history.push('/');
+
   return (
-    <Container fluid className=" d-flex home-page justify-content-center">
+    <Container fluid className="d-flex flex-column home-page">
+      <NavigationBar onLogOut={onLogOut}></NavigationBar>
+      <Row className="w-100 h-100">
+        <Col md={{ span: 6, offset: 0 }} xs={{ span: 12, offset: 0 }}>
+          <LineGraph data={data} legend="Registered Users" />
+        </Col>
+        <Col md={{ span: 6, offset: 0 }} xs={{ span: 12, offset: 0 }}>
+          <LineGraph data={data} legend="Logins Users" />
+        </Col>
+      </Row>
       <Row className="w-100">
         <Col
           lg={{ span: 10, offset: 1 }}
           md={{ span: 8, offset: 2 }}
-          xs={{ span: 10, offset: 1 }}
+          xs={{ span: 12, offset: 0 }}
         >
           <UsersTable
             className=""
@@ -101,4 +184,4 @@ const HomePage = () => {
     </Container>
   );
 };
-export default HomePage;
+export default withRouter(HomePage);
