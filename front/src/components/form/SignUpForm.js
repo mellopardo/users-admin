@@ -102,6 +102,7 @@ const SignUpForm = (props) => {
         variant="danger"
         type="submit"
         className="mx-auto d-block button-signup"
+        disabled={props.loading}
       >
         Submit
       </Button>

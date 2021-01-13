@@ -2,3 +2,11 @@
     background: #f5f5f5;
     margin-top: 50px;
 }
+
+.spinner {
+    margin-top: 50px;
+}
+
+.home-page-graph {
+    max-height: 350px;
+}
