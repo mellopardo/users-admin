@@ -70,9 +70,14 @@ const HomePage = ({ history }) => {
   }, []);
 
   const loadUsers = async () => {
-    const users = await actions.getUsers();
-    setUsers(users);
-    setLoading(false);
+    try {
+      const users = await actions.getUsers();
+      setUsers(users);
+      setLoading(false);
+    } catch (error) {
+      alert("error");
+      setLoading(false);
+    }
   }
 
   const editUser = async (user) => {
